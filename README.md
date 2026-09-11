@@ -13,10 +13,10 @@ ItaPets é um catálogo virtual de produtos para animais de estimação, desenvo
 
 ## Próximas etapas
 
-- Criar a identidade visual e o layout responsivo com CSS.
+- Criar a identidade visual com CSS.
 - Adicionar interações e comportamentos dinâmicos com JavaScript.
-- Evoluir o catálogo com recursos como busca, filtros e carrinho de compras.
-- Avaliar a integração com um backend para produtos, pedidos e processamento de dados.
+- Acrescentar mais produtos ao catálogo.
+- Evoluir o catálogo com recursos como busca e filtros.
 
 ## Estrutura do projeto
 
@@ -30,10 +30,6 @@ ItaPets é um catálogo virtual de produtos para animais de estimação, desenvo
     └── *.webp
 ```
 
-## Status do projeto
-
-O projeto está em desenvolvimento. A estrutura HTML já está disponível, enquanto os estilos, as interações e futuras integrações ainda serão implementados.
-
 ## Autoria
 
-Projeto ItaPets desenvolvido por Daiane Santos para fins acadêmicos.
+Projeto ItaPets desenvolvido para fins acadêmicos por **Daiane Santos**.
