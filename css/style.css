@@ -1,0 +1,421 @@
+/* ==========================================================================
+   1. BASE — Reset e Tipografia
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3748;
+    background-color: #f0f4f8;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.00em;
+    color: #1a3c6e;
+}
+
+h2 {
+    font-size: 1.50em;
+    color: #1a3c6e;
+}
+
+p {
+    color: #4a5568;
+}
+
+a {
+    color: #2d3748;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e05c00;
+}
+
+
+/* ==========================================================================
+   2. LAYOUT — Header e Main
+   ========================================================================== */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #e2e8f0;
+    padding: 0.75em 2em;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+header > img {
+    width: 100px;
+    height: auto;
+}
+
+header > p {
+    font-size: 1.1em;
+    color: #0b1d3f;
+    font-style: italic;
+    flex: 1;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none; 
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    font-weight: bold;
+    font-size: 0.95em;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    color: #1a3c6e;
+    background-color: #eef2ff;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: #e05c00;
+    color: #ffffff;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 1.25em;
+    flex: 1; 
+    width: 100%;
+}
+
+/* ==========================================================================
+   3. COMPONENTES — Footer, Cards, Categorias e Formulário
+   ========================================================================== */
+
+.vitrine {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5em;
+}
+
+article {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 1.25em;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e2e8f0;
+}
+
+article:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+article img {
+    width: 150px;
+    height: 150px;
+}
+
+article h2 {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #1a3c6e;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background-color: #eef2ff;
+    padding: 0.2em 0.75em;
+    border-radius: 20px;
+}
+
+article a {
+    color: #2d3748;
+    font-size: 0.92em;
+    line-height: 1.45;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+article a:hover {
+    color: #e05c00;
+}
+
+article strong {
+    font-size: 1.25em;
+    color: #e05c00;
+    font-weight: bold;
+    margin-top: auto; 
+}
+
+main > img {
+    margin: 0 auto 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    max-width: 320px;
+    background-color: #ffffff;
+    padding: 1em;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 160px 1fr; 
+    gap: 0.75em 1.25em;
+    padding: 1.75em;
+    background-color: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    max-width: 700px;
+}
+
+dt {
+    font-weight: bold;
+    color: #1a3c6e;
+}
+
+dd {
+    color: #4a5568;
+}
+
+mark {
+    background-color: #fff3e0;
+    color: #e05c00;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0.15em 0.5em;
+    border-radius: 6px;
+}
+
+form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+fieldset legend {
+    font-weight: bold;
+    color: #1a3c6e;
+    padding: 0 0.4em;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.35em;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.95em;
+}
+
+fieldset label:has(input[type="checkbox"]),
+fieldset label:has(input[type="radio"]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    margin-right: 1em;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75em 1em;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    color: #2d3748;
+    background-color: #f7fafc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+    resize: vertical; 
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); 
+    background-color: #ffffff;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.85em;
+    margin-top: 0.5em;
+    background-color: #1a3c6e;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; 
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(26, 60, 110, 0.25);
+}
+
+input[type="submit"]:hover {
+    background-color: #e05c00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(224, 92, 0, 0.30);
+}
+
+footer {
+    background-color: #2b6cb0; 
+    color: #ffffff;
+    padding: 2.5em 1em 1em 1em;
+    margin-top: 3.5em;
+    font-size: 0.95em;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05em;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #feebc8;
+}
+
+
+.footer-bottom {
+    margin-top: 1.75em;
+    padding-top: 1.2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.88em;
+    opacity: 0.85;
+}
+
+.categorias {
+    display: flex;
+    gap: 0.75em;
+    flex-wrap: wrap; 
+    margin: 1.5em 0;
+    padding: 1em 1.25em;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.btn-categoria {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.5em 1.1em;
+    background-color: #f0f4f8;
+    color: #1a3c6e;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-categoria:hover {
+    background-color: #fff3e0;
+    border-color: #e05c00;
+    color: #e05c00;
+}
+
+.titulo-categoria {
+    font-size: 1.4em;
+    color: #1a3c6e;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+    border-bottom: 3px solid #e05c00;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+/* ==========================================================================
+   4. RESPONSIVIDADE — Media Queries
+   ========================================================================== */
+
+@media (min-width: 600px) {
+    .vitrine {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.75em 1em;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header img {
+        max-width: 180px;
+    }
+
+    .vitrine {
+        grid-template-columns: 1fr;
+    }
+}
