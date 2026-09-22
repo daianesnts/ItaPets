@@ -23,7 +23,7 @@ ItaPets é um catálogo virtual de produtos para animais de estimação, desenvo
 .
 ├── index.html                  # Página inicial e catálogo
 ├── css/                        # Estilização do site
-│   ├── style.css
+│   └── style.css
 ├── html/                       # Páginas de detalhes e contato
 │   ├── contato.html
 │   └── *.html
