@@ -113,9 +113,14 @@ main {
    ========================================================================== */
 
 .vitrine {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5em;
+}
+
+.vitrine > article {
+    flex: 1 1 100%; 
+    max-width: 100%;
 }
 
 article {
@@ -142,7 +147,7 @@ article img {
     height: 150px;
 }
 
-article h2 {
+article h3 {
     font-size: 0.9em;
     font-weight: bold;
     color: #1a3c6e;
@@ -311,12 +316,14 @@ footer {
     font-size: 0.95em;
 }
 
-.footer-logo {
+footer > img {
     width: 100px;
     height: auto;
+    display: block;
+    margin: 0 auto 1em;
 }
 
-.footer-nav {
+footer > nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -325,7 +332,7 @@ footer {
     margin-top: 0.5em;
 }
 
-.footer-nav a {
+footer > nav a {
     color: #ffffff;
     font-weight: 600;
     font-size: 1.05em;
@@ -333,12 +340,12 @@ footer {
     transition: color 0.2s ease;
 }
 
-.footer-nav a:hover {
+footer > nav a:hover {
     color: #feebc8;
 }
 
 
-.footer-bottom {
+footer > p {
     margin-top: 1.75em;
     padding-top: 1.2em;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -349,10 +356,10 @@ footer {
     opacity: 0.85;
 }
 
-.categorias {
+main > nav {
     display: flex;
     gap: 0.75em;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     margin: 1.5em 0;
     padding: 1em 1.25em;
     background-color: #ffffff;
@@ -361,7 +368,7 @@ footer {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.btn-categoria {
+main > nav a {
     display: inline-flex;
     align-items: center;
     gap: 0.35em;
@@ -376,7 +383,7 @@ footer {
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.btn-categoria:hover {
+main > nav a:hover {
     background-color: #fff3e0;
     border-color: #e05c00;
     color: #e05c00;
@@ -395,25 +402,45 @@ footer {
 }
 
 /* ==========================================================================
-   4. RESPONSIVIDADE — Media Queries
+   4. RESPONSIVIDADE — Media Queries 
    ========================================================================== */
 
 @media (min-width: 600px) {
-    .vitrine {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    .vitrine > article {
+        flex: 1 1 calc(50% - 0.75em); 
+    }
+
+    header {
+        flex-wrap: nowrap;
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1024px) {
+    .vitrine > article {
+        flex: 1 1 calc(25% - 1.125em); 
+    }
+
+    form {
+        max-width: 900px; 
+    }
+}
+
+@media (max-width: 599px) {
     header {
         padding: 0.75em 1em;
         justify-content: center;
         text-align: center;
+        flex-direction: column;
+    }
+
+    header > img {
+        max-width: 120px;
     }
 
     dl {
-        grid-template-columns: 110px 1fr;
-        gap: 0.75em 1em;
+        grid-template-columns: 100px 1fr;
+        gap: 0.5em 0.75em;
+        padding: 1em;
     }
 
     mark {
@@ -421,11 +448,8 @@ footer {
         padding: 0.1em 0.35em;
     }
 
-    header img {
-        max-width: 180px;
-    }
-
-    .vitrine {
-        grid-template-columns: 1fr;
+    main > nav {
+        padding: 0.75em 1em;
+        gap: 0.5em;
     }
 }
