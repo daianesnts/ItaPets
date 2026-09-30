@@ -1,0 +1,219 @@
+@import "bootstrap.min.css";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3748;
+    background-color: #f0f4f8;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: grid;
+    grid:
+        "header" auto "main" 1fr "footer" auto / 1fr;
+}
+
+header {
+    grid-area: header;
+    background-color: #ffffff;
+    border-bottom: 3px solid #e2e8f0;
+    padding: 0.75em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+header>img {
+    width: 100px;
+    height: auto;
+}
+
+header>p {
+    font-size: 1.1em;
+    color: #0b1d3f;
+    font-style: italic;
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    font-weight: bold;
+    font-size: 0.95em;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    color: #1a3c6e;
+    background-color: #eef2ff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: #e05c00;
+    color: #ffffff;
+}
+
+main {
+    grid-area: main;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em 1.25em;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    color: #1a3c6e;
+    margin-bottom: 1em;
+}
+
+fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.75em;
+    margin-bottom: 1.5em;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+fieldset legend {
+    font-weight: bold;
+    color: #1a3c6e;
+    padding: 0 0.4em;
+    font-size: 1em;
+}
+
+.form-control,
+.form-select {
+    border-color: #cbd5e0;
+    background-color: #f7fafc;
+    color: #2d3748;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    background-color: #ffffff;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.95em;
+}
+
+.form-check-label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #1a3c6e;
+    border-color: #1a3c6e;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.85em;
+    margin-top: 0.5em;
+    background-color: #1a3c6e;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(26, 60, 110, 0.25);
+}
+
+input[type="submit"]:hover {
+    background-color: #e05c00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(224, 92, 0, 0.30);
+}
+
+footer {
+    grid-area: footer;
+    background-color: #2b6cb0;
+    color: #ffffff;
+    padding: 2.5em 1em 1em 1em;
+    font-size: 0.95em;
+}
+
+footer>img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em;
+}
+
+footer>nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+
+footer>nav a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05em;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+footer>nav a:hover {
+    color: #feebc8;
+}
+
+footer>p {
+    margin-top: 1.75em;
+    padding-top: 1.2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.88em;
+    opacity: 0.85;
+}
+
+@media (max-width: 599px) {
+    header {
+        padding: 0.75em 1em;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header>img {
+        max-width: 120px;
+    }
+}
