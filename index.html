@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="img/favicon.webp" rel="icon" type="favicon/webp" />
     <title>ItaPets - A melhor loja para o seu pet</title>
@@ -23,8 +24,41 @@
     </header>
 
     <main>
-        <h1>Produtos em Destaque</h1>
-        <p>Clique na imagem ou na descrição do produto para abrir a página de detalhes.</p>
+
+        <div id="carouselItaPets" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselItaPets" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselItaPets" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselItaPets" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="img/petisco-e-racao.webp"
+                        class="d-block w-100" alt="Petiscos e Rações ItaPets">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="img/tudo-oque-seu-pet-precisa.webp"
+                        class="d-block w-100" alt="Tudo o que seu pet precisa - ItaPets">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="img/festival-de-acessorios.webp"
+                        class="d-block w-100" alt="Festival de Acessórios ItaPets">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselItaPets" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselItaPets" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Proximo</span>
+            </button>
+        </div>
+
+        <h1>Nossos Produtos</h1>
+        <p>Clique na imagem ou na descrição do produto para abrir a página de detalhes. Use o botão <strong>Ver Detalhes</strong> para uma prévia rápida.</p>
 
         <nav aria-label="Filtro por categoria">
             <a href="#cachorro">Cachorro</a>
@@ -39,16 +73,15 @@
 
             <article>
                 <h3>Ração Premium</h3>
-                <a
-                    href="html/racao-premier-nattu-super-premium-frango-abobora-brocolis-quinoa-blueberry-caes-adultos-12kg.html">
+                <a href="html/racao-premier-nattu-super-premium-frango-abobora-brocolis-quinoa-blueberry-caes-adultos-12kg.html">
                     <img src="img/racao-premier-nattu-super-premium-frango-abobora-brocolis-quinoa-blueberry-caes-adultos-12kg.webp"
                         alt="Ração Premier Nattu para Cães Adultos 12kg">
                 </a>
-                <a
-                    href="html/racao-premier-nattu-super-premium-frango-abobora-brocolis-quinoa-blueberry-caes-adultos-12kg.html">Ração
+                <a href="html/racao-premier-nattu-super-premium-frango-abobora-brocolis-quinoa-blueberry-caes-adultos-12kg.html">Ração
                     Seca Premier Nattu para Cães Adultos Sabor Natural 12kg
                 </a>
                 <strong>R$ 274,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Ração Premier Nattu 12kg', 'R$ 274,90', 'Ração seca super premium com sabor natural de frango, abóbora, brócolis, quinoa e blueberry para cães adultos. Pacote de 12kg.', 'img/racao-premier-nattu-super-premium-frango-abobora-brocolis-quinoa-blueberry-caes-adultos-12kg.webp', 'html/racao-premier-nattu-super-premium-frango-abobora-brocolis-quinoa-blueberry-caes-adultos-12kg.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -61,6 +94,7 @@
                     com trava de segurança
                 </a>
                 <strong>R$ 93,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Coleira Nylon Ajustável', 'R$ 93,90', 'Coleira de nylon super resistente com trava de segurança regulável. Ideal para passeios e adestramento.', 'img/coleira-nylon-ajustavel-resistente-segura-segura.webp', 'html/coleira-nylon-ajustavel-resistente-segura-segura.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -73,6 +107,7 @@
                     fortalecer os dentes do seu cão
                 </a>
                 <strong>R$ 12,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Osso de Borracha', 'R$ 12,90', 'Brinquedo atóxico de borracha resistente, ideal para fortalecer os dentes do seu cão durante as brincadeiras.', 'img/brinquedo-osso-borracha-cachorro-fortalecer-dentes.webp', 'html/brinquedo-osso-borracha-cachorro-fortalecer-dentes.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -85,6 +120,7 @@
                     natural
                 </a>
                 <strong>R$ 8,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Petisco Doguitos Bifinho Carne 65g', 'R$ 8,90', 'Petisco Purina Doguitos com tiras de carne desidratada 100% natural. Pacote de 65g. Sem corantes e conservantes artificiais.', 'img/petisco_purina_doguitos_bifinho_carne-65g.webp', 'html/petisco_purina_doguitos_bifinho_carne-65g.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -97,6 +133,7 @@
                     cães e gatos
                 </a>
                 <strong>R$ 23,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Escova Rasqueadeira', 'R$ 23,90', 'Remove pelos mortos e evita nós nos pelos de cães e gatos. Ergonômica e de fácil limpeza.', 'img/escova-rasqueadeira-pelos-caes-gatos.webp', 'html/escova-rasqueadeira-pelos-caes-gatos.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -109,6 +146,7 @@
                     viagens seguras de pequenos animais
                 </a>
                 <strong>R$ 78,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Caixa de Transporte MMA Pet Rosa', 'R$ 78,90', 'Caixa de transporte resistente para cães, gatos e coelhos de até 10kg. Ideal para viagens e consultas veterinárias.', 'img/caixa-transporte-mma-pet-rosa-caes-gatos-coelhos-ate-10kg.webp', 'html/caixa-transporte-mma-pet-rosa-caes-gatos-coelhos-ate-10kg.html')">Ver Detalhes</button>
             </article>
 
         </section>
@@ -126,6 +164,7 @@
                     seu gato
                 </a>
                 <strong>R$ 47,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Arranhador Torre com Bolinha', 'R$ 47,90', 'Arranhador em torre com bolinha interativa para diversão e exercício do seu gato. Ajuda a proteger seus móveis.', 'img/arranhador-torre-com-bolinha-gatos.webp', 'html/arranhador-torre-com-bolinha-gatos.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -138,6 +177,7 @@
                     biodegradável com alta absorção
                 </a>
                 <strong>R$ 59,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Areia Sanitária Biodegradável 4kg', 'R$ 59,90', 'Pacote de 4kg de areia fina biodegradável com alta absorção. Livre de pó, ideal para gatos de todas as idades.', 'img/areia-sanitaria-gatos-biodegradavel-absorcao-4kg.webp', 'html/areia-sanitaria-gatos-biodegradavel-absorcao-4kg.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -150,6 +190,7 @@
                     gatos de pele sensível
                 </a>
                 <strong>R$ 45,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Shampoo Sanol 500ml', 'R$ 45,90', 'Shampoo de 500ml indicado para cães e gatos de pele sensível. Fórmula hipoalergênica e com pH neutro.', 'img/shampoo-pele-sensivel-caes-e-gatos-sanol-500ml.webp', 'html/shampoo-pele-sensivel-caes-e-gatos-sanol-500ml.html')">Ver Detalhes</button>
             </article>
 
         </section>
@@ -167,6 +208,7 @@
                     qualidade para calopsitas 300g
                 </a>
                 <strong>R$ 49,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Ração Nutropica Calopsita 300g', 'R$ 49,90', 'Ração gourmet com ingredientes naturais de alta qualidade especialmente formulada para calopsitas. Pacote de 300g.', 'img/racao-nutropica-gourmet-calopsita-300g.webp', 'html/racao-nutropica-gourmet-calopsita-300g.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -178,6 +220,7 @@
                     qualidade para beija-flor 250g
                 </a>
                 <strong>R$ 12,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Nectar Beija-flor 250g', 'R$ 12,90', 'Nectar com ingredientes naturais de alta qualidade formulado especialmente para beija-flores. Pacote de 250g.', 'img/nectar-reino-das-aves-para-beija-flor-250g.webp', 'html/nectar-reino-das-aves-para-beija-flor-250g.html')">Ver Detalhes</button>
             </article>
 
         </section>
@@ -193,6 +236,7 @@
                 <a href="html/brinquedo-roda-para-roedores-14cm.html">Roda para roedores de 14cm de diâmetro
                 </a>
                 <strong>R$ 31,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Roda de Exercício para Roedores 14cm', 'R$ 31,90', 'Roda de exercício silenciosa para hamsters e outros roedores. Diâmetro de 14cm, suporte metálico resistente.', 'img/brinquedo-roda-para-roedores-14cm.webp', 'html/brinquedo-roda-para-roedores-14cm.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -204,6 +248,7 @@
                 <a href="html/bebedouro-chalesco-drinker-para-roedores-250ml.html">Bebedouro para roedores de 250ml
                 </a>
                 <strong>R$ 14,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Bebedouro Chalesco Drinker 250ml', 'R$ 14,90', 'Bebedouro gotejador de 250ml para hamsters e outros roedores. Sistema anti-gotejamento com bico em aço inoxidável.', 'img/bebedouro-chalesco-drinker-para-roedores-250ml.webp', 'html/bebedouro-chalesco-drinker-para-roedores-250ml.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -216,6 +261,7 @@
                     roedores
                 </a>
                 <strong>R$ 65,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Caixa Transporte Ferplast Aladino', 'R$ 65,90', 'Caixa de transporte Ferplast Aladino para hamsters, porquinhos-da-índia e outros roedores. Resistente e ventilada.', 'img/caixa-de-transporte-para-roedores-ferplast-aladino.webp', 'html/caixa-de-transporte-para-roedores-ferplast-aladino.html')">Ver Detalhes</button>
             </article>
 
         </section>
@@ -233,6 +279,7 @@
                     silicone atóxico.
                 </a>
                 <strong>R$ 159,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Aquário Compacto Retangular 18L', 'R$ 159,90', 'Aquário compacto retangular de 18 litros com acabamento em silicone atóxico. Ideal para peixes ornamentais.', 'img/aquario-compacto-retangular-lester-N03-18l.webp', 'html/aquario-compacto-retangular-lester-N03-18l.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -245,6 +292,7 @@
                     natural.
                 </a>
                 <strong>R$ 4,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Substrato Aqua Pedras Rio', 'R$ 4,90', 'Substrato natural para aquários, composto de pedras do rio. Auxilia na filtragem biológica e na decoração.', 'img/substrato-para-aquarios-aqua-pedras-rio.webp', 'html/substrato-para-aquarios-aqua-pedras-rio.html')">Ver Detalhes</button>
             </article>
 
             <article>
@@ -255,11 +303,38 @@
                 <a href="html/alimento-para-peixe-alcon-guppy-20g.html">Alimento para peixes com fórmula completa.
                 </a>
                 <strong>R$ 29,90</strong>
+                <button class="btn-detalhes" onclick="abrirDetalhes('Alimento Alcon Guppy 20g', 'R$ 29,90', 'Alimento com fórmula completa e balanceada para guppies e outros peixes tropicais. Pacote de 20g.', 'img/alimento-para-peixe-alcon-guppy-20g.webp', 'html/alimento-para-peixe-alcon-guppy-20g.html')">Ver Detalhes</button>
             </article>
 
         </section>
 
     </main>
+
+    <!-- =====================================================
+         COMPONENTE 2: Modal de Detalhes do Produto (BS5)
+         Preenchido dinamicamente via JavaScript (script.js)
+         Aberto pela funcao abrirDetalhes() em cada produto
+         ===================================================== -->
+    <div class="modal fade" id="modalProduto" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitulo">Detalhes do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImagem" src="" alt="" class="img-fluid rounded mb-3" style="max-height:200px; object-fit:contain; width:100%;">
+                    <p id="modalPreco" class="fw-bold fs-5 text-success mb-1"></p>
+                    <p id="modalDescricao" class="text-muted"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a id="modalLinkDetalhes" href="#" class="btn btn-primary">Ver Página Completa</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim do Modal -->
 
     <footer>
         <img src="img/logo-loja-produtos-pet-itapets-navegacao.webp" alt="Logo ItaPets" width="100">
@@ -274,6 +349,11 @@
             &copy; 2026 ItaPets - Todos os Direitos Reservados.
         </p>
     </footer>
+
+    <!-- Bootstrap 5 JS Bundle (inclui Popper.js) - necessario para Carousel e Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script externo do ItaPets com funcoes JavaScript -->
+    <script src="js/script.js"></script>
 
 </body>
 
